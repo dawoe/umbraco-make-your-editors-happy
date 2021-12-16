@@ -3,9 +3,46 @@
  *
  * By Hakim El Hattab, http://hakim.se
  */
-@import url(./fonts/source-sans-pro/source-sans-pro.css);
+@import url("//hello.myfonts.net/count/39ec0b");
+@font-face {
+  font-family: "GalanoGrotesque";
+  src: url("/dist/theme/fonts/39EC0B_11_0.woff2") format("woff2"), url("/dist/theme/fonts/39EC0B_11_0.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GalanoGrotesque";
+  src: url("/dist/theme/fonts/39EC0B_4_0.woff2") format("woff2"), url("/dist/theme/fonts/39EC0B_4_0.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GalanoGrotesque";
+  src: url("/dist/theme/fonts/39EC0B_5_0.woff2") format("woff2"), url("/dist/theme/fonts/39EC0B_5_0.woff") format("woff");
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Newzald";
+  src: url("/dist/theme/fonts/NewzaldWeb-Book.woff2") format("woff2"), url("/dist/theme/fonts/NewzaldWeb-Book.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Newzald";
+  src: url("/dist/theme/fonts/NewzaldWeb-Black.woff2") format("woff2"), url("/dist/theme/fonts/NewzaldWeb-Black.woff") format("woff");
+  font-weight: 900;
+  font-display: swap;
+}
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222;
+}
+
+#dc-logo {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  z-index: 10000;
 }
 
 /*********************************************
@@ -18,7 +55,7 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-main-color: #fff;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: Source Sans Pro, Helvetica, sans-serif;
+  --r-heading-font: GalanoGrotesque, Helvetica, sans-serif;
   --r-heading-color: #ff2345;
   --r-heading-line-height: 1.2;
   --r-heading-letter-spacing: normal;
