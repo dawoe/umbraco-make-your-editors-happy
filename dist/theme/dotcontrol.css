@@ -392,3 +392,11 @@ section.has-light-background, section.has-light-background h1, section.has-light
     background-color: var(--r-background-color);
   }
 }
+pre code {
+  font-size: 1rem;
+  line-height: 1.1rem;
+}
+
+.reveal .hljs.has-highlights tr:not(.highlight-line) {
+  opacity: 0.2;
+}

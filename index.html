@@ -44,9 +44,8 @@
 				</section>
 				<section>
 					<h2>Today is about</h2>
-					<p>Creating a better editor experience</p>
-					<p class="fragment">Often neglected in favor of website visitor experience</p>
-					<p class="fragment">But just as important</p>	
+					<p>Creating a better editor experience</p>					
+					<p class="fragment">But just as important website visitor experience</p>	
 					<p class="fragment">Does not require a lot of additional effort</p>	
 					<aside class="notes">
 						- Most things  will seem obvious<br/>
@@ -278,7 +277,60 @@
 					<p>Create something custom</p>
 				</section>				
 				<section>
-					<h2>Taking it further</h2>
+					<h2>Tweaking the backoffice</h2>
+					<p>By using <a href="https://our.umbraco.com/Documentation/Reference/Notifications/EditorModel-Notifications/">EditorModel Notifications</a></p>
+					<p class="fragment">Which allow us to manipulate the model used by the backoffice before it is loaded into an editor.</p>
+				</section>
+				<section>
+					<h2>Disable preview</h2>
+					<pre>
+						<code data-trim data-noescape class="language-csharp" data-line-numbers="1|3|10|12-20">
+							public class SendingContentNotificationHandler : INotificationHandler<SendingContentNotification>
+							{																
+								public void Handle(SendingContentNotification notification)
+								{
+									if (ContentTypes.Contains(notification.Content.ContentTypeAlias))
+									{
+										return;
+									}
+							
+									notification.Content.AllowPreview = false;
+																	
+									var urls = new List<UrlInfo>();							
+									var urlCultures = notification.Content.Urls.Select(x => x.Culture).Distinct().ToList();
+							
+									foreach (var culture in urlCultures)
+									{
+										urls.Add(UrlInfo.Message("This page has no links", culture));
+									}
+							
+									notification.Content.Urls = urls.ToArray();
+								}
+							}
+						</code>
+					</pre>
+				</section>
+				<section>
+					<h2>Disable preview</h2>
+					<img src="/img/preview-disabled.jpg">
+				</section>
+				<section>
+					<h2>Tweaking the backoffice</h2>
+					<ul>
+						<li>Hide tabs and/or properties</li>
+						<li>Set default values</li>
+						<li>Change property editor view or data</li>
+						<li>Remove actions (for example unpublish)</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Tweaking the backoffice</h2>
+					<ul>
+						<li>Media items</li>
+						<li>Members</li>
+						<li>Users</li>
+						<li>Dahsboards</li>
+					</ul>
 				</section>
 			</div>
 		</div>
@@ -293,6 +345,7 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
@@ -301,7 +354,7 @@
 				hash: true,
 
 				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealZoom ]
 			});
 		</script>
 	</body>
