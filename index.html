@@ -32,11 +32,7 @@
 						MVP since 2016<br/>
 						First blog written in 2008
 					</aside>
-				</section>
-				<section>
-					<h2>A bit less active ...</h2>
-					<img class="fragment" src="/img/strava.jpg" />
-				</section>
+				</section>				
 				<section>
 					<h2>Back in 2015...</h2>
 					<img src="/img/content-is-king.jpg" class="fragment">
@@ -107,8 +103,7 @@
 				<section>
 					<h2>Descriptions</h2>
 					<ul>
-						<li class="fragment">Have limitations</li>
-						<li class="fragment">Not enough space for long descriptions</li>
+						<li class="fragment">Length limitations</li>					
 						<li class="fragment">Markup limitations</li>
 						<li class="fragment">Use one of these packages</li>
 						<li class="fragment"><a href="https://our.umbraco.com/packages/backoffice-extensions/editor-notes-aka-ueditornotes/">Editor notes</a> or <a href="https://our.umbraco.com/packages/backoffice-extensions/contentment/">Contentment</a></li>
@@ -156,14 +151,132 @@
 					<img src="/img/doctype.jpg" height="500">
 				</section>
 				<section>
-					<h2>List views</h2>
+					<h2>Mandatory properties</h2>
+					<ul>
+						<li class="fragment">As a developer seems logical</li>
+						<li class="fragment">But it can prevent editors from rapidly publishing content</li>
+						<li class="fragment">Handle empty properties with a fallback</li>
+						<li class="fragment">Only make them mandatory when needed</li>
+					</ul>
+					<aside class="notes">
+						<p>Developer => no need to handle empty properties</p>
+						<p>Editor => Hypothetical case</p>
+						<p>Fallbacks => Defensive programming, seo title to name, image to a default image or backgroungd color</p>
+					</aside>
 				</section>
 				<section>
-					<h2>Required properties</h2>
+					<h2>List views</h2>
+					<ul>
+						<li class="fragment">Ideal for large collections of content</li>
+						<li class="fragment">Enabled on doctype</li>
+						<li class="fragment">Can be used as property editor</li>
+						<li class="fragment">Can be <a href="https://24days.in/umbraco-cms/2016/custom-list-view-layouts/">customized</a></li>
+					</ul>
+					<aside class="notes">
+						<p>Ideal for blogs, news, ... support searching, bulk actions</p>
+						<p>Disables tree, use property editor for when you need tree</p>
+						<p>By default use your list/grid view. But can be configured</p>
+					</aside>
+				</section>	
+				<section>
+					<h2>Property editors</h2>
+					<p>The editor experience can be improved by using the correct property editor.</p>		
+					<aside class="notes">
+						<p>For example call to action button</p>
+					</aside>								
 				</section>
 				<section>
 					<h2>Property editors</h2>
+					<img src="/img/buttons-wrong.jpg">					
 				</section>
+				<section>
+					<h2>Property editors</h2>
+					<img src="/img/buttons-correct.jpg">
+				</section>			
+				<section>
+					<h2>Property editors</h2>
+					<p>Use the power of the community.</p>				
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<img src="/img/description.jpg">
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<img src="/img/metadata.jpg">
+					<small>Example is using <a href="https://our.umbraco.com/packages/collaboration/seo-visualizer/">SEO Visualizer</a></small>
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<p>Think ahead when selecting a property editor.</p>
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<img src="/img/image-placement-toggle.jpg">
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<img src="/img/image-placement-lr.jpg">
+					<small>Example is using <a href="https://our.umbraco.com/packages/backoffice-extensions/contentment/">Contentment</a> datalist</small>
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<img src="/img/image-placement-full.jpg">
+					<small>Example is using <a href="https://our.umbraco.com/packages/backoffice-extensions/contentment/">Contentment</a> datalist</small>
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<p>Hide irrelevant properties</p>
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<img src="/img/condition-pick-content.jpg">
+					<small>Example is using <a href="https://our.umbraco.com/packages/backoffice-extensions/conditional-displayers/">Conditional displayers</a> dropdown</small>
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<img src="/img/condition-categories.jpg">
+					<small>Example is using <a href="https://our.umbraco.com/packages/backoffice-extensions/conditional-displayers/">Conditional displayers</a> dropdown</small>
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<img src="/img/condition-page-categories.jpg">
+					<small>Example is using <a href="https://our.umbraco.com/packages/backoffice-extensions/conditional-displayers/">Conditional displayers</a> dropdown</small>
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<p>A lot of property editors support customizing their appearance to create a tailored experience.</p>					
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<p>Customize the blocklist preview.</p>
+					<p>Article with examples on <a href="https://24days.in/umbraco-cms/2021/advanced-blocklist-editor/">24 days in Umbraco</a></p>
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<img src="/img/block-editor-default.jpg">				
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<img src="/img/custom-preview.jpg">				
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<p>Alternatives for content pickers</p>
+					<p>Use a <a href="https://our.umbraco.com/packages/backoffice-extensions/contentment/">Contentment</a> datalist with a custom editor</p>
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<img src="/img/featured-products-mntp.jpg">				
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<img src="/img/featured-products-contentment.gif">				
+				</section>
+				<section>
+					<h2>Property editors</h2>
+					<p>Create something custom</p>
+				</section>				
 				<section>
 					<h2>Taking it further</h2>
 				</section>
